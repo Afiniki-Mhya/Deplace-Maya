@@ -1,13 +1,14 @@
 * {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 body {
     background-color: #fcf9ee;
     min-height: max-content;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .main {
@@ -44,6 +45,7 @@ body {
 
 .summer {
     font-size: 40px;
+    padding-right: 0.2rem;
 }
 
 .coll-container {
@@ -55,11 +57,13 @@ body {
 
 .coll {
     font-size: 15px;
+    font-weight: lighter;
     
 }
 
 .coll-year {
     font-size: 15px;
+    font-weight: lighter;
 }
 
 .hero-imgs {
@@ -83,4 +87,83 @@ body {
     align-items: flex-end;
     text-align: end;
 
+}
+
+.scrolling-text {
+    position: relative;
+    overflow: hidden;
+    margin-top: 2rem;
+    height: 30px;
+    background: yellow;
+    border-bottom: 2px solid #000;
+    border-top: 2px solid #000;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    display: inline-block;
+    padding-right: 120%;
+    animation: scroll-text 10s linear infinite;
+    font-weight: bold;
+}
+
+@keyframes scroll-text {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.about{
+    padding-top: 4rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.about-header{
+    text-decoration: underline;
+    font-weight: lighter;
+    font-size: 13px;
+}
+
+.about-span-text{
+    display: flex;
+    gap: 2rem;
+}
+
+.cards{
+    display: flex;
+    gap: 0.5rem;
+    padding-top: 30%;
+    position: absolute;
+    overflow: hidden;
+    left: 15%;
+    transition: 0s ease-in;
+    padding-bottom: 4rem;
+    
+}
+
+.coll-card{
+    background-color: #e7d6c4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    padding-top: 4rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.coll-card img{
+    width: 38vw;
+    padding-bottom: 1rem;
 }
