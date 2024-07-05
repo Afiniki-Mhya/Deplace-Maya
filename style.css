@@ -7,7 +7,7 @@
 
 body {
     background-color: #fcf9ee;
-    min-height: max-content;
+    height: 100%;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -104,7 +104,7 @@ body {
 
 .text {
     display: inline-block;
-    padding-right: 120%;
+    padding-right: 160%;
     animation: scroll-text 10s linear infinite;
     font-weight: bold;
 }
@@ -130,7 +130,8 @@ body {
 .about-header{
     text-decoration: underline;
     font-weight: lighter;
-    font-size: 13px;
+    font-size: 14px;
+    width: 85px;
 }
 
 .about-span-text{
@@ -138,32 +139,66 @@ body {
     gap: 2rem;
 }
 
-.cards{
-    display: flex;
-    gap: 0.5rem;
-    padding-top: 30%;
-    position: absolute;
-    overflow: hidden;
-    left: 15%;
-    transition: 0s ease-in;
-    padding-bottom: 4rem;
+.cards-container {
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    height: 240px;
     
 }
 
-.coll-card{
+.cards {
+    display: flex;
+    gap: 0.5rem;
+    position: absolute;
+    transition: left 0.1s ease;
+    cursor: grab;
+    user-select: none; 
+    
+}
+
+.coll-card {
     background-color: #e7d6c4;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 1px solid #000;
-    padding-top: 4rem;
-    padding-bottom: 0.5rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding: 1rem;
+    min-width: 200px; 
+    
 }
 
-.coll-card img{
-    width: 38vw;
+.coll-card img {
+    width: 100px; 
     padding-bottom: 1rem;
+}
+
+.cards.dragging {
+    cursor: grabbing;
+    transition: none; 
+}
+
+.review{
+    display: flex;
+    flex-direction: column;
+}
+
+.review-elements {
+display: flex;
+gap: 1rem;
+padding-top: 2rem;
+}
+
+.review-elements h1{
+    font-size: 18px;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.review-elements p{
+    font-size: 12px;
+    font-weight: 900;
 }
